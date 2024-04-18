@@ -3,11 +3,12 @@ package PrimerEjercicio;
 public class Quick {
     // metodo para ordenar
     public void ordenar(Alumno[] arreglo) {
-
+        arreglo = quickShort1(arreglo);
     }
 
     public Alumno[] quickShort1(Alumno numeros[]) {
-        return null;
+        /* Se entrega el arreglo y posicion isquierda y derecha */
+        return quickShort2(numeros, 0, numeros.length - 1);
     }
 
     public Alumno[] quickShort2(Alumno numeros[], int isq, int der) {
