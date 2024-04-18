@@ -49,11 +49,11 @@ public class Alumno {
         this.promedio = promedio;
     }
 
-    
+   
+    public String mostrarDatos() {
+        return "Alumno [dni=" + dni + ", nombre=" + nombre + ", edad=" + edad + ", promedio=" + promedio + "]";
+    }
 
-    
-
-
-    
+        
 
 }
