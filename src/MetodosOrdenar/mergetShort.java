@@ -15,12 +15,12 @@ public class mergetShort {
             mitad = (der + izq) / 2;
             mergetProduct(arreglo, izq, mitad);
             mergetProduct(arreglo, mitad + 1, der);
-            mergetShort(arreglo, izq, mitad + 1, der);
+            mergetShort1(arreglo, izq, mitad + 1, der);
         }
         return arreglo;
     }
 
-    private void mergetShort(Producto vector[], int izq, int mitad, int der) {
+    private void mergetShort1(Producto vector[], int izq, int mitad, int der) {
         Producto aux[] = new Producto[vector.length];
         // int contador = 0;
         int i = izq; // indice de la parte isquierda

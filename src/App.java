@@ -1,7 +1,9 @@
+import MetodosOrdenar.QuickShort;
 import MetodosOrdenar.mergetShort;
 import PrimerEjercicio.Alumno;
 import PrimerEjercicio.Merget;
 import PrimerEjercicio.Quick;
+import TercerEjercicio.Cliente;
 import TercerEjercicio.Producto;
 
 public class App {
@@ -15,13 +17,40 @@ public class App {
 
         // ejemploMetodoMergetShort();
         // ejemploMetodoQuickShort();
-        ejemploMergetShortProductos();
+       // ejemploMergetShortProductos();
+       ejemploQuickShortClientes();
+    }
+
+    public static void ejemploQuickShortClientes() {
+        Cliente cliente[] = new Cliente[5];
+        cliente[0] = new Cliente(001, "Florentino Garcia Perez", 98123456, 'M', "florentino@gmail.com", 987789098);
+
+        cliente[1] = new Cliente(002, "Walter Rios Flores", 87890045, 'M', "walter@gmail.com", 987678777);
+        cliente[2] = new Cliente(003, "Mirtha Flores", 23543412, 'F', "mirtha@gmail.com", 1);
+        cliente[3] = new Cliente(004, "Daniel Moran", 21325465, 'F', "daniela@gmail.com", 956888999);
+        cliente[4] = new Cliente(005, "Tomas Aguilar", 34345467, 'M', "tomas@gmail.com", 911234654);
+
+        System.out.println("\nDatos del los clientes");
+        mostrarDatosClientes(cliente);
+
+        QuickShort obj = new QuickShort();
+        obj.ordenarCLientes(cliente);
+        System.out.println("\nDatos de los clientes ordenados");
+        mostrarDatosClientes(cliente);
+    }
+
+    public static void mostrarDatosClientes(Cliente[] arreglo){
+      int total = arreglo.length;
+        for (int i = 0; i < total; i++) {
+            System.out.println(i + " " + arreglo[i].mostrarDatos());
+        }
+        System.out.println();
     }
 
     public static void ejemploMergetShortProductos() {
         Producto ejemplo[] = new Producto[10];
 
-        ejemplo[0] = new Producto(1, "Producto de aseo", 50, 50, 4.5);
+        ejemplo[0] = new Producto(1, "Producto de aseo", 50, 50, 0.5);
         ejemplo[1] = new Producto(2, "Producto de aseo", 30, 50, 10.4);
         ejemplo[2] = new Producto(3, "Producto de Cocina", 30, 50, 12.0);
         ejemplo[3] = new Producto(4, "Producto de Tecnologia", 45, 50, 11.0);
