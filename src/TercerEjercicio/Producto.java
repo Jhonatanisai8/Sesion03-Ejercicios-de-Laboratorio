@@ -47,6 +47,12 @@ public class Producto {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+
+    public String mostrarDatos() {
+        return "Producto [codigo=" + codigo + ", descripcion=" + descripcion + ", stock=" + stock + ", stockMinino="
+                + stockMinino + ", precio=" + precio + "]";
+    }
+    
     
     
 }
