@@ -10,7 +10,7 @@ public class Merget {
         int mitad;
         if (der > izq) {
             mitad = (der + izq) / 2;
-            mergetShortAlum(array, izq, der);
+            mergetShortAlum(array, izq, mitad);
             mergetShortAlum(array, mitad + 1, der);
             merge(array, izq, mitad + 1, der);
         }
@@ -20,7 +20,7 @@ public class Merget {
     private void merge(Alumno vector[], int izq, int mitad, int der) {
 
         Alumno aux[] = new Alumno[vector.length];
-        int contador = 0;
+       // int contador = 0;
         int i = izq; // indice de la parte isquierda
         int j = mitad; // indice de la parte derecha
         int k = izq; // indice del vector resultande

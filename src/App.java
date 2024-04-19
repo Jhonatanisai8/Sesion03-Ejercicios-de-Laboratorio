@@ -1,4 +1,5 @@
 import PrimerEjercicio.Alumno;
+import PrimerEjercicio.Merget;
 import PrimerEjercicio.Quick;
 
 public class App {
@@ -9,13 +10,37 @@ public class App {
      * Utilizar para este ejercicio ordenamiento recursivo QUICKSHORT
      */
     public static void main(String[] args) throws Exception {
+        
+        //ejemploMetodoMergetShort();
+        ejemploMetodoQuickShort();
+    }
 
+    public static void ejemploMetodoMergetShort() {
         // ingresamos elementos al arreglo del alumnos
-        Alumno[] array = new Alumno[3]; // de tres posiciones
+        Alumno[] array = new Alumno[4]; // de tres posiciones
         // asiganamos valores
         array[0] = new Alumno("41742587", "Juan Perez", 21, 14);
         array[1] = new Alumno("10587458", "Diego Liviano", 27, 11);
         array[2] = new Alumno("52962858", "Vania Salcedo", 17, 12);
+        array[3] = new Alumno("23457689", "Jonas", 9, 18);
+        System.out.println("Datos Antes del ordenamiento");
+        mostrar(array);
+
+        // llamamos al metodo de mergetShort
+        Merget obj = new Merget();
+        obj.ordenarMegertShort(array);
+        System.out.println("Datos  del arreglo ordenados");
+        mostrar(array);
+    }
+
+    public static void ejemploMetodoQuickShort() {
+        // ingresamos elementos al arreglo del alumnos
+        Alumno[] array = new Alumno[4]; // de tres posiciones
+        // asiganamos valores
+        array[0] = new Alumno("41742587", "Juan Perez", 21, 14);
+        array[1] = new Alumno("10587458", "Diego Liviano", 27, 11);
+        array[2] = new Alumno("52962858", "Vania Salcedo", 17, 12);
+        array[3] = new Alumno("23457689", "Jonas", 9, 18);
 
         System.out.println("Datos Antes del ordenamiento");
         mostrar(array);
